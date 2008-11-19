@@ -1,0 +1,18 @@
+<h1>Listing artists</h1>
+
+<table>
+  <tr>
+  </tr>
+
+<% for artist in @artists %>
+  <tr>
+    <td><%= link_to artist.name, artist %></td>
+    <td><%= link_to 'Edit', edit_artist_path(artist) %></td>
+    <td><%= link_to 'Destroy', artist, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New artist', new_artist_path %>

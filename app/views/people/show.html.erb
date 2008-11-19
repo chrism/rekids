@@ -1,0 +1,15 @@
+<h1><%= @person.name %></h1>
+	
+<% if !@person.artists.blank? %>
+	<p>records as...
+  <% for item in @person.artists %>
+    <%= link_to item.name, item %>
+  <% end %>
+	</p>
+<% else %>
+  
+<% end %>
+
+
+<%= link_to 'Edit', edit_person_path(@person) %> |
+<%= link_to 'Back', people_path %>
